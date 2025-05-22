@@ -1,4 +1,4 @@
-import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}})();const u=document.querySelector(".buy-button"),l=document.body;u.addEventListener("click",n);const p=l.innerHTML;let c="";function n(s){history.pushState({html:p},"",""),l.innerHTML="";const i={name:'Футболка "АНТИ-ХРЕСТ"',price:"???",size:["S","M","L"]};c=`
+import"./assets/styles-jZpiioBa.js";import{i as l,S as h}from"./assets/vendor-aHTGYYFN.js";const w=document.querySelector(".buy-button"),i=document.body;w.addEventListener("click",r);const g=i.innerHTML;let a="";function r(t){history.pushState({html:g},"",""),i.innerHTML="";const e={name:'Футболка "АНТИ-ХРЕСТ"',price:"???",size:["S","M","L"]};a=`
 
         <div class="block-for-tee">
   <div class="tee-content">
@@ -18,14 +18,14 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
     
     <div class="block-for-infotee">
       <ul class="list-info-tee">
-        <li>${i.name}</li>
-        <li>Ціна: ${i.price}</li>
+        <li>${e.name}</li>
+        <li>Ціна: ${e.price}</li>
       </ul>
       <ul class="list-size-tee">
         <li>Розміри:</li>
-        <li>${i.size[0]}</li>
-        <li>${i.size[1]}</li>
-        <li>${i.size[2]}</li>
+        <li>${e.size[0]}</li>
+        <li>${e.size[1]}</li>
+        <li>${e.size[2]}</li>
       </ul>
       <button type="button" class="order-button">Замовити</button>
     </div>
@@ -62,7 +62,7 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
                         name="user-city"
                         id="user-city"
                         class="modal-input"
-                        required
+                        
 
                 >
                 
@@ -79,7 +79,7 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
                         name="user-tel"
                         id="user-tel"
                         class="modal-input"
-                        required
+                        
 
                 >
                 
@@ -91,7 +91,7 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
 
 
                 <div class="user-block">
-                <select >
+                <select class="modal-select">
                   <option value="1">На сайті</option>
                   <option value="2">При отриманні</option>
                 </select>
@@ -106,7 +106,7 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
                           name="user-post-pib"
                           id="user-post-pib"
                           class="modal-input"
-                          required
+                          
 
                   >
                 </div>  
@@ -119,7 +119,7 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
                         name="user-post-number"
                         id="user-post-number"
                         class="modal-input"
-                        required
+                        
 
                 >
                 
@@ -131,7 +131,7 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
                     id="user-privacy"
                     class="modal-input-check visually-hidden"
                     value="true"
-                    required
+                    
 
             >
 
@@ -158,5 +158,5 @@ import{S as d}from"./assets/vendor-DH7JeqP3.js";(function(){const i=document.cre
 
 
     
-    `,l.insertAdjacentHTML("afterbegin",c);const o=document.querySelector(".order-button"),r=document.querySelector(".backdrop"),e=document.querySelector(".btn-quit");o.addEventListener("click",t=>{r.classList.add("show")}),e.addEventListener("click",t=>{r.classList.remove("show")}),new d(".swiper",{direction:"horizontal",loop:!0,pagination:{el:".swiper-pagination",clickable:!0},effect:"flip",grabCursor:!0,loop:!0})}window.addEventListener("popstate",s=>{if(s.state&&s.state.html){l.innerHTML=s.state.html;const i=document.querySelector(".buy-button");i&&i.addEventListener("click",n)}});
+    `,i.insertAdjacentHTML("afterbegin",a);const c=document.querySelector(".order-button"),o=document.querySelector(".backdrop"),n=document.querySelector(".btn-quit");c.addEventListener("click",s=>{o.classList.add("show")});const d=document.querySelector("form"),u=document.querySelector('[name="user-city"]'),p=document.querySelector('[name="user-tel"]'),m=document.querySelector('[name="user-post-pib"]'),b=document.querySelector('[name="user-post-number"]'),v=document.querySelector('[name="user-privacy"]');d.addEventListener("submit",s=>{s.preventDefault();const y=s.currentTarget;u.value!==""&&p.value!==""&&m.value!==""&&b.value!==""&&v.checked?(l.show({message:"Дякуємо за замовлення!",messageColor:"white",color:"green",position:"topCenter"}),y.reset(),o.classList.remove("show")):l.show({message:"Заповніть всі поля будь ласка!",messageColor:"white",color:"red",position:"topCenter"})}),n.addEventListener("click",s=>{o.classList.remove("show")}),new h(".swiper",{direction:"horizontal",loop:!0,pagination:{el:".swiper-pagination",clickable:!0},effect:"flip",grabCursor:!0,loop:!0})}window.addEventListener("popstate",t=>{if(t.state&&t.state.html){i.innerHTML=t.state.html;const e=document.querySelector(".buy-button");e&&e.addEventListener("click",r)}});
 //# sourceMappingURL=index.js.map
