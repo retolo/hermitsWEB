@@ -2,6 +2,9 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 
+import iziToast from "izitoast";
+
+import "izitoast/dist/css/iziToast.min.css";
 
 
 const buyBtn = document.querySelector('.buy-button');
@@ -95,7 +98,7 @@ function handleBuyButton(event){
                         name="user-city"
                         id="user-city"
                         class="modal-input"
-                        required
+                        
 
                 >
                 
@@ -112,7 +115,7 @@ function handleBuyButton(event){
                         name="user-tel"
                         id="user-tel"
                         class="modal-input"
-                        required
+                        
 
                 >
                 
@@ -124,7 +127,7 @@ function handleBuyButton(event){
 
 
                 <div class="user-block">
-                <select >
+                <select class="modal-select">
                   <option value="1">На сайті</option>
                   <option value="2">При отриманні</option>
                 </select>
@@ -139,7 +142,7 @@ function handleBuyButton(event){
                           name="user-post-pib"
                           id="user-post-pib"
                           class="modal-input"
-                          required
+                          
 
                   >
                 </div>  
@@ -152,7 +155,7 @@ function handleBuyButton(event){
                         name="user-post-number"
                         id="user-post-number"
                         class="modal-input"
-                        required
+                        
 
                 >
                 
@@ -164,7 +167,7 @@ function handleBuyButton(event){
                     id="user-privacy"
                     class="modal-input-check visually-hidden"
                     value="true"
-                    required
+                    
 
             >
 
@@ -195,15 +198,64 @@ function handleBuyButton(event){
 
     
     body.insertAdjacentHTML('afterbegin', markUpForBuy);
+
     const orderBtn = document.querySelector('.order-button');
     const backDrop = document.querySelector('.backdrop');
     const btnQuit = document.querySelector('.btn-quit');
+
     orderBtn.addEventListener('click', (event) =>{
       backDrop.classList.add('show');
+    })
+    const btnForm = document.querySelector('form');
+    const inputCity = document.querySelector('[name="user-city"]');
+    const inputTel = document.querySelector('[name="user-tel"]');
+
+    const inputUserPostPib = document.querySelector('[name="user-post-pib"]');
+    const inputUserPostNumber = document.querySelector('[name="user-post-number"]');
+    const inputCheck = document.querySelector('[name="user-privacy"]');
+    btnForm.addEventListener('submit', (event) =>{
+      event.preventDefault();
+      
+
+    
+
+    const form = event.currentTarget;
+    if(inputCity.value !== '' && inputTel.value !== '' && inputUserPostPib.value !== '' && inputUserPostNumber.value !== '' && inputCheck.checked){
+        iziToast.show({
+                
+                message: 'Дякуємо за замовлення!',
+                messageColor: 'white',
+                color: 'green',
+                position: 'topCenter'
+            });
+            form.reset();
+            backDrop.classList.remove('show');
+
+    }
+    else{
+        iziToast.show({
+                
+                message: 'Заповніть всі поля будь ласка!',
+                messageColor: 'white',
+                color: 'red',
+                position: 'topCenter'
+            });
+
+    }
+    
+    
+
+    
+
+    
+    
+    
+    
     })
     btnQuit.addEventListener('click', (event) =>{
       backDrop.classList.remove('show');
     })
+    
     
 
     const swiper = new Swiper('.swiper', {
