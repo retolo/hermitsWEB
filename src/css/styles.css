@@ -418,3 +418,7 @@ select{
   font-weight: 400;
   color: black;
 }
+
+.registration-text{
+  cursor: pointer;
+}
