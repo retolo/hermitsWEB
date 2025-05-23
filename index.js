@@ -1,4 +1,4 @@
-import"./assets/styles-jZpiioBa.js";import{i as l,S as h}from"./assets/vendor-aHTGYYFN.js";const w=document.querySelector(".buy-button"),i=document.body;w.addEventListener("click",r);const g=i.innerHTML;let a="";function r(t){history.pushState({html:g},"",""),i.innerHTML="";const e={name:'Футболка "АНТИ-ХРЕСТ"',price:"???",size:["S","M","L"]};a=`
+import"./assets/styles-BMMjdCW5.js";import{i as l,S as h}from"./assets/vendor-aHTGYYFN.js";const w=document.querySelector(".buy-button"),i=document.body;w.addEventListener("click",r);const g=i.innerHTML;let a="";function r(t){history.pushState({html:g},"",""),i.innerHTML="";const e={name:'Футболка "АНТИ-ХРЕСТ"',price:"???",size:["S","M","L"]};a=`
 
         <div class="block-for-tee">
   <div class="tee-content">
